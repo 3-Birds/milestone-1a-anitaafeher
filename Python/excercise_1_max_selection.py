@@ -8,4 +8,12 @@
 
 def get_max(numbers:list) -> int:
     pass
+    if numbers is None or len(numbers) == 0:
+        return None
+    result = numbers[0]
+    for i in numbers:
+        if i > result:
+            result = i
+    return result
+
 

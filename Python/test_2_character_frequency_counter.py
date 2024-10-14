@@ -1,7 +1,20 @@
 # TEST OF CHARACTER FREQUENCY COUNTER EXCERCISE
 
 import unittest
-from excercise_2_character_frequency_counter import get_frequency
+#from excercise_2_character_frequency_counter import get_frequency
+
+def get_frequency(input_string:str) -> dict:
+    pass
+    if input_string is None or input_string == "":
+        return None
+    result = {}
+    for i in input_string:
+        i = i.lower()
+        if i in result:
+            result[i] += 1
+        else:
+            result[i] = 1
+    return result
 
 # AUTOMATED TEST, DO NOT MODIFY
 class TestStringMethods(unittest.TestCase):

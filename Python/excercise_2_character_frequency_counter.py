@@ -16,3 +16,13 @@
 
 def get_frequency(input_string:str) -> dict:
     pass
+    if input_string is None or input_string == "":
+        return None
+    result = {}
+    for i in input_string:
+        i = i.lower()
+        if i in result:
+            result[i] += 1
+        else:
+            result[i] = 1
+    return result
